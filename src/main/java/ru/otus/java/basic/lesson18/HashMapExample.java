@@ -1,6 +1,8 @@
 package ru.otus.java.basic.lesson18;
 
 
+import ru.otus.java.basic.lesson18.util.Measure;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -38,7 +40,7 @@ public class HashMapExample {
 
         @Override
         public int hashCode() {
-            return 1;
+            return Objects.hash(val);
         }
     }
 }

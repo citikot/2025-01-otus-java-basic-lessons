@@ -1,13 +1,15 @@
 package ru.otus.java.basic.lesson18;
 
 
+import ru.otus.java.basic.lesson18.util.Measure;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
 public class HashMapVsTreeMap {
-    static int SIZE = 100000;
+    static int SIZE = 100_000;
 
     public static void main(String[] args) {
         NavigableMap<Integer, Integer> treeMap = new TreeMap<>();

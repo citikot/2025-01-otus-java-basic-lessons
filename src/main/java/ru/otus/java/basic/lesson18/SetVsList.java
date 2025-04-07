@@ -1,12 +1,14 @@
 package ru.otus.java.basic.lesson18;
 
 
+import ru.otus.java.basic.lesson18.util.Measure;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 
 public class SetVsList {
-    static int SIZE = 100000;
+    static int SIZE = 1000000;
 
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
