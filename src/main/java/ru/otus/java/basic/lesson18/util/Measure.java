@@ -1,4 +1,4 @@
-package ru.otus.java.basic.lesson17.util;
+package ru.otus.java.basic.lesson18.util;
 
 public class Measure {
     private static long time;

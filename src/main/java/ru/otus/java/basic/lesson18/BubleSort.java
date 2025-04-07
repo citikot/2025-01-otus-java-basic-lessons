@@ -1,4 +1,4 @@
-package ru.otus.java.basic.lesson17;
+package ru.otus.java.basic.lesson18;
 
 public class BubleSort {
     public static void main(String[] args) {
