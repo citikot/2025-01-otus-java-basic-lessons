@@ -12,7 +12,7 @@ public class HashMapVsTreeMap {
     public static void main(String[] args) {
         NavigableMap<Integer, Integer> treeMap = new TreeMap<>();
         Map<Integer, Integer> hashMap = new HashMap<>();
-
+        System.out.println("fill ==========");
         Measure.stamp();
         fill(treeMap);
         Measure.print();
@@ -20,6 +20,7 @@ public class HashMapVsTreeMap {
         Measure.stamp();
         fill(hashMap);
         Measure.print();
+        System.out.println("search ==========");
 
         Measure.stamp();
         search(treeMap);
@@ -33,13 +34,13 @@ public class HashMapVsTreeMap {
     }
 
     public static void fill(Map<Integer, Integer> map) {
-        for (int i = 0; i < SIZE; i ++) {
+        for (int i = 0; i < SIZE; i++) {
             map.put(i, i);
         }
     }
 
     public static void search(Map<Integer, Integer> map) {
-        for (int i = 0; i < SIZE; i ++) {
+        for (int i = 0; i < SIZE; i++) {
             map.get(i);
         }
     }

@@ -20,7 +20,7 @@ public class DequeExample {
         deque.push(2);
         deque.push(3);
 
-        while (!deque.isEmpty()){
+        while (!deque.isEmpty()) {
             System.out.println(deque.poll());
         }
     }

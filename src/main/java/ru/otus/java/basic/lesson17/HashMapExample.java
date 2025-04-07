@@ -2,19 +2,20 @@ package ru.otus.java.basic.lesson17;
 
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class HashMapExample {
     public static void main(String[] args) {
-        HashMap<Key, String> map = new HashMap<>();
+        Map<Key, String> map = new HashMap<>();
         Measure.stamp();
-        for (int i = 0; i < 10000; i ++) {
+        for (int i = 0; i < 10000; i++) {
             map.put(new Key(Integer.toHexString(i)), "");
         }
         Measure.print();
 
         Measure.stamp();
-        for (int i = 0; i < 10000; i ++) {
+        for (int i = 0; i < 10000; i++) {
             map.get(new Key(Integer.toHexString(i)));
         }
         Measure.print();
@@ -37,7 +38,7 @@ public class HashMapExample {
 
         @Override
         public int hashCode() {
-            return Objects.hash(val);
+            return 1;
         }
     }
 }

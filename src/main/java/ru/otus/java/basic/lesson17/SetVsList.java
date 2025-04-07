@@ -11,7 +11,7 @@ public class SetVsList {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();
         HashSet<Integer> hashSet = new HashSet<>();
-        hashSet.contains(1);
+
         Measure.stamp();
         insert(arrayList);
         Measure.print();

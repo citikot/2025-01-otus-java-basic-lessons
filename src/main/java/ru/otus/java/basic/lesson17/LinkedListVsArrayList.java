@@ -8,39 +8,40 @@ import java.util.Random;
 
 
 public class LinkedListVsArrayList {
-    static int SIZE = 100_000;
-    static Random rnd= new Random();
+    static int SIZE = 100_00000;
+    static Random rnd = new Random();
 
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = getArrayList();
         LinkedList<Integer> linkedList = integerLinkedList();
 
+        Measure.stamp();
+        insert(arrayList);
+        Measure.print();
+
+        Measure.stamp();
+        insert(linkedList);
+        Measure.print();
+
 //        Measure.stamp();
-//        insert(arrayList);
+//        search(arrayList);
 //        Measure.print();
 //
 //        Measure.stamp();
-//        insert(linkedList);
+//        search(linkedList);
 //        Measure.print();
-
-        Measure.stamp();
-        search(arrayList);
-        Measure.print();
-
-        Measure.stamp();
-        search(linkedList);
-        Measure.print();
     }
 
     private static ArrayList<Integer> getArrayList() {
-        ArrayList<Integer> ar = new ArrayList(SIZE);
+        ArrayList<Integer> ar = new ArrayList<>(SIZE);
         for (int i = 0; i < SIZE; i++) {
             ar.add(rnd.nextInt(10));
         }
         return ar;
     }
+
     private static LinkedList<Integer> integerLinkedList() {
-        LinkedList<Integer> ar = new LinkedList();
+        LinkedList<Integer> ar = new LinkedList<>();
         for (int i = 0; i < SIZE; i++) {
             ar.add(rnd.nextInt(10));
         }
@@ -56,8 +57,8 @@ public class LinkedListVsArrayList {
     static void insert(List<Integer> list) {
         for (int i = 0; i < SIZE; i++) {
 //            list.add(i);
-//            list.add(list.size()/2,i);
-            list.add(0, i);
+            list.add(list.size() / 2, i);
+//            list.add(0, i);
         }
     }
 }

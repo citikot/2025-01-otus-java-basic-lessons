@@ -25,12 +25,12 @@ public class TreeExample {
         dep2.children = List.of(group21, group22);
         dep3.children = List.of(group31, group32);
 
-       printStructure(tree, "");
+        printStructure(tree, "");
     }
 
     public static void printStructure(Tree item, String prefix) {
         System.out.println(prefix + "->" + item.getName());
-        for (Tree child: item.getChildren()) {
+        for (Tree child : item.getChildren()) {
             printStructure(child, prefix + "->" + item.name);
         }
     }
