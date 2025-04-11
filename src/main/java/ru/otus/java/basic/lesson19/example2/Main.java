@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        try (FileInputStream in = new FileInputStream("files/demo.txt")) {
+        try (FileInputStream in = new FileInputStream("src/main/java/ru/otus/java/basic/lesson19/example1/files/demo.txt")) {
             byte[] buf = new byte[64];
             int n = in.read(buf);
             System.out.println("READ = " + n);

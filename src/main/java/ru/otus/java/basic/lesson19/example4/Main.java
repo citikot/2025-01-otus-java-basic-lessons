@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) {
-        try (FileInputStream fis = new FileInputStream("files/demo.txt");
+        try (FileInputStream fis = new FileInputStream("src/main/java/ru/otus/java/basic/lesson19/example1/files/demo.txt");
              BufferedInputStream bis = new BufferedInputStream(fis);
              InputStreamReader in = new InputStreamReader(bis)) {
             int n = in.read();

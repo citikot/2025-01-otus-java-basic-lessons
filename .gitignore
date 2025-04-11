@@ -1,0 +1,14 @@
+/.idea
+.idea
+.idea/*
+/target/
+/out/
+/out
+*.log
+/application-local.properties
+/application-alpha.properties
+*.iml
+.settings/*
+.project
+.classpath
+
