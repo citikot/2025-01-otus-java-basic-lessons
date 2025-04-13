@@ -1,14 +1,34 @@
 package ru.otus.java.basic.lesson18;
 
+import ru.otus.java.basic.lesson18.util.Measure;
+
 public class BubleSort {
+
+    Measure measure = new Measure();
+    static final int ARR_SIZE = 100_000;
+
     public static void main(String[] args) {
-        int[] array = new int[10];
+        int[] array = new int[ARR_SIZE];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10000);
         }
-        printArray(array);
+//        printArray(array);
+        Measure.stamp();
         directSort(array);
-        printArray(array);
+        Measure.print();
+//        printArray(array);
+
+        array = new int[ARR_SIZE];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (Math.random() * 10000);
+        }
+
+//        printArray(array);
+        Measure.stamp();
+        bubbleSort(array);
+        Measure.print();
+//        printArray(array);
+
     }
 
     private static void directSort(int[] array) {
@@ -34,18 +54,17 @@ public class BubleSort {
         System.out.println();
     }
 
-    private static void bubleSort(int[] array) {
-        boolean needSort;
+    private static void bubbleSort(int[] array) {
+        int j = 0;
         do {
-            needSort = false;
-            for (int i = 0; i < array.length - 1; i++) {
+            for (int i = j; i < array.length - 1; i++) {
                 if (array[i] > array[i + 1]) {
                     int temp = array[i];
                     array[i] = array[i + 1];
                     array[i + 1] = temp;
-                    needSort = true;
                 }
             }
-        } while (needSort);
+            j++;
+        } while (j < array.length - 1);
     }
 }

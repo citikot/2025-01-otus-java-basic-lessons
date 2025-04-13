@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         String data = "Hello World New";
         byte[] buffer = data.getBytes(StandardCharsets.UTF_8);
-        try (FileOutputStream out = new FileOutputStream("files/out1.txt",false)) {
+        try (FileOutputStream out = new FileOutputStream("src/main/java/ru/otus/java/basic/lesson19/example1/files/out.txt",false)) {
             for (int i = 0; i < buffer.length; i++) {
                 out.write(buffer[i]);
             }
