@@ -23,13 +23,13 @@ public class Server {
                 client.close();
                 continue;
             }
-            String result = getUpperCaseUserIput(userInput);
+            String result = getUpperCaseUserInput(userInput);
             outputStream.writeUTF(result);
             outputStream.flush();
         }
     }
 
-    private static String getUpperCaseUserIput(String userInput) {
+    private static String getUpperCaseUserInput(String userInput) {
         System.out.println("начали трансформацию! ");
         return userInput.toUpperCase();
     }
